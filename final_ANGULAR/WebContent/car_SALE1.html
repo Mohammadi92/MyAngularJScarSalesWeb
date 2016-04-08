@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+<meta charset="UTF-8">
+<title>LUXURY AUTO</title>
+<link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="app.css">
+<script
+	src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+
+<script
+	src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular-route.min.js"></script>
+
+<script src="app.js"></script>
+</head>
+<body>
+	<div id="header-wrapper" ng-controller="MyCtrl">
+		<span class="logo pull-left">{{appDetails.title}}</span> <span
+			class="tagline pull-left">{{appDetails.tagline}}</span>
+		<div class="nav-wrapper pull-left">
+			<ul class="nav nav-pills">
+				<li ng-class="{active: nav.isActive('/books')}"><a href="#/books">BUY</a></li>
+				<li ng-class="{active: nav.isActive('/Cart')}"><a href="#/Cart">CART</a></li>
+			</ul>
+
+		</div>
+		
+	</div>
+
+
+
+
+<div ng-view></div>
+
+
+
+
+</body>
+</html>
